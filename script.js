@@ -1,10 +1,15 @@
+let interval;
+
 function startAge() {
+
+  // Stop old interval
+  clearInterval(interval);
 
   const dobValue = document.getElementById('dob').value;
 
   const birthDate = new Date(dobValue);
 
-  setInterval(() => {
+  interval = setInterval(() => {
 
     const now = new Date();
 
